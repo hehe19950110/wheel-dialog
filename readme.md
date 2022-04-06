@@ -31,6 +31,7 @@ HTML
 <button onclick="clearAlert();">Cancel alert before it happens</button>
 ```
 
+
 JavaScript
 ```
 var timeoutID;

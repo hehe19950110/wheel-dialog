@@ -53,7 +53,7 @@ function clearAlert() {
 4、关于"this"的问题
 当你向 setTimeout() (或者其他函数)传递一个函数时,该函数中的this指向跟你的期望可能不同，
 
-因为由setTimeout()调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 this 关键字在非严格模式会指向 window (或全局)对象，严格模式下为 undefined，这和所期望的this的值是不一样的。
+因为由setTimeout()调用的代码运行在与所在函数完全分离的执行环境上。这会导致，这些代码中包含的 this 关键字在非严格模式会指向 window 对象（没人调用的情况下，指向全局或者window），严格模式下为 undefined（没有window），这和所期望的this的值是不一样的。
 
 ！！！即使是在严格模式下，setTimeout()的回调函数里面的this仍然默认指向window对象， 并不是undefined。
 
